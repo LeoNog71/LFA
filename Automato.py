@@ -32,25 +32,28 @@ grafo.add_edge(("q3","q1"),label= alfabeto[1])
 
 estado_atual = estado_inicial
 
-T = False
-while not T:
+while True:
+
 
     for x in string:
 
         a = grafo.neighbors(estado_atual)
+        if a != None:
 
-        for y in a:
-            if grafo.edge_label((estado_atual,y)) == x:
-                print(estado_atual+"=>"+x)
-                estado_atual = y
-                print("=>"+y)
+            for y in a:
+                if grafo.edge_label((estado_atual,y)) == x:
+                    print(estado_atual+"=>"+x)
+                    estado_atual = y
+                    print("=>"+y)
+                    break
+
 
 
 
 
     if estado_atual == estado_final[0] or estado_atual == estado_final[1]:
         print("A sentença "+string+" pertence a linguagem")
-        T = True
+        quit()
     else:
         print("Sentença "+string+" nao pertence a linguagem")
         quit()
