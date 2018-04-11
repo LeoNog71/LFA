@@ -1,7 +1,7 @@
 from pygraph.classes.digraph import *
 from pygraph.algorithms.searching import *
 
-string = "aabb"#input()
+string =input("digite a seguido de b: ")
 
 estados = ["q0","q1","q2","q3"]
 estado_final = ["q0","q3"]
@@ -37,6 +37,7 @@ while not T:
 
 
     if estado_atual == estado_final[0] or estado_atual == estado_final[1]:
+        print("A sentença "+string+" pertence a linguagem")
         T = True
     else:
         print("Sentença nao pertence a linguagem")
