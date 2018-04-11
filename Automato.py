@@ -8,6 +8,12 @@ estado_final = ["q0","q3"]
 estado_inicial = "q0"
 alfabeto = ["a","b"]
 
+print("estados:")
+print(estados)
+print("estado inicial: "+estado_inicial)
+print("estados finais: ")
+print(estado_final)
+print("------------------------")
 grafo = digraph()
 
 grafo.add_nodes(estados)
