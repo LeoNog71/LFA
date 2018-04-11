@@ -1,5 +1,4 @@
 from pygraph.classes.digraph import *
-from pygraph.algorithms.searching import *
 
 string =input("digite a seguido de b: ")
 
@@ -14,6 +13,7 @@ print("estado inicial: "+estado_inicial)
 print("estados finais: ")
 print(estado_final)
 print("------------------------")
+
 grafo = digraph()
 
 grafo.add_nodes(estados)
@@ -26,6 +26,7 @@ grafo.add_edge(("q2","q3"),label=alfabeto[1])
 grafo.add_edge(("q3","q2"),label= alfabeto[1])
 
 estado_atual = estado_inicial
+
 T = False
 while not T:
 
